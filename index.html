@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>HTML5 Canvas Winning Wheel</title>
+    <link rel="stylesheet" href="./assets/styles/main.css" type="text/css"/>
+    <script type="text/javascript" src="./script/Winwheel.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+</head>
+<body>
+<div align="center" id="main">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td>
+                <div class="power_controls">
+                    <img id="spin_button" src="./assets/img/spin_on.png" alt="Spin" onClick="startSpin();"/>
+                    &nbsp;&nbsp;<a href="#" onClick="resetWheel(); return false;">Play Again</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(reset)
+                </div>
+            </td>
+            <td width="421" height="564" class="the_wheel" align="center" valign="center">
+                <canvas id="canvas" width="420" height="420">
+                    <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try
+                        another.</p>
+                </canvas>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="modal">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <form action="#">
+                <div class="modal__close" data-close>&times;</div>
+                <div class="modal__title">Оставь свой емайл</div>
+                <label for="name">Name</label>
+                <input required placeholder="Name" name="name" type="text" class="modal__input" id="name">
+                <label for="email">Email</label>
+                <input required placeholder="example@site.com" name="email" type="email" class="modal__input" id="email">
+                <label for="phone">Phone</label>
+                <input required placeholder="+1 123 456 7890 " name="phone" type="text" class="modal__input" id="phone">
+                <label for="prize">твой подарок</label>
+                <input required placeholder=" " name="prize" type="text" class="modal__input" id="prize">
+                <button class="btn">Получить подарок</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="./script/main.js"></script>
+</body>
+</html>
